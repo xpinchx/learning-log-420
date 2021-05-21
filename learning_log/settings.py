@@ -137,6 +137,7 @@ BOOTSTRAP3 = {
 }
 
 # Heroku settings
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 cwd = os.getcwd()
 if cwd == '/app' or cwd[:4] == '/tmp':
