@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -147,8 +146,10 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     # Honor the 'X-Forwaded'Proto' header for request.is_secuire()
     SECURE_PROXY_SSL_HEADER = ('HTTP-X_FORWARDED_PROTO', 'https')
 
-    # Allow all host headers
-    ALLOWED_HOSTS = ['*']
+    # Allow only Heroku to host the project.
+    ALLOWED_HOSTS = ['https://learning-log-420.herokuapp.com/']
+
+    DEBUG = False
 
     # Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
