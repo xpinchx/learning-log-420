@@ -1,0 +1,36 @@
+# Change directory
+cd learning_log
+
+# Alternatively, use native venv
+python -m venv ll_env
+
+# Activate virtual env
+source ll_env/bin/activate
+
+# Deactivate if needed
+deactivate
+
+# Install Django
+pip install Django
+
+# Upgrade pip
+pip install --upgrade pip
+
+# Start the server
+python manage.py runserver
+
+# Starting the app
+source ll_env/bin/activate
+python manage.py startapp learning_logs
+
+# Migrate (First time creates all files)
+python manage.py migrate
+
+# Migrate (Next step)
+python manage.py makemigrations learning_logs
+
+# Migrate (Next step)
+python manage.py migrate
+
+# Making a new page
+Define a URL, write a view function, make a template, link to page 
