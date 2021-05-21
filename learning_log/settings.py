@@ -137,6 +137,12 @@ BOOTSTRAP3 = {
 }
 
 # Heroku settings
+STATIC_TMP = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+
+os.makedirs(STATIC_TMP, exist_ok=True)
+os.makedirs(STATIC_ROOT, exist_ok=True)
+
 cwd = os.getcwd()
 if cwd == '/app' or cwd[:4] == '/tmp':
     import dj_database_url
