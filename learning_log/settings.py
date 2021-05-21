@@ -151,7 +151,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     ALLOWED_HOSTS = ['*']
 
     # Static asset configuration
-    BASE_DIR = os.path.dirname(os.path.a bspath(__file__))
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     STATIC_ROOT = 'staticfiles'
     STATCFILES_DIRS = (
         os.path.join(BADE_DIR, 'static'),
