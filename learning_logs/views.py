@@ -47,6 +47,7 @@ def new_topic(request):
   context = {'form': form}
   return render(request, 'learning_logs/new_topic.html', context)
 
+@login_required
 def new_entry(request, topic_id):
   """Add a new entry for a particular topic"""
   topic = Topic.objects.get(id=topic_id)
