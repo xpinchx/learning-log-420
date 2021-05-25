@@ -1,5 +1,5 @@
 # Change directory
-cd learning_log
+cd learning_/
 
 # Alternatively, use native venv
 python -m venv ll_env
